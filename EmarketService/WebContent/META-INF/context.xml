@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Context [
+<!ELEMENT Context (Resource+)>
+<!ELEMENT Resource (#PCDATA)>
+<!ATTLIST Resource name CDATA #IMPLIED
+				   auth CDATA #IMPLIED
+				   type CDATA #IMPLIED
+				   maxActive CDATA #IMPLIED
+				   maxIdle CDATA #IMPLIED
+ 				   maxWait CDATA #IMPLIED
+				   username CDATA #IMPLIED
+				   password CDATA #IMPLIED
+				   driverClassName CDATA #IMPLIED
+				   url CDATA #IMPLIED>
+]>
+<Context>
+	  <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
+               maxActive="100" maxIdle="30" maxWait="10000"
+               username="root" password="123456" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://localhost:3306/emkdb"/>
+</Context>

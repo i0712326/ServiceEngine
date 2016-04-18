@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<query name="getProduct">
+		from Product p where p.id = :id
+	</query>
+	<query name="getProducts">
+		from Product p where p.id like :id and p.name like :name
+	</query>
+</hibernate-mapping>
