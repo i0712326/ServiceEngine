@@ -115,7 +115,7 @@ public class ProductDaoImp implements ProductDao {
 			public List<Product> doInHibernate(Session session)
 					throws HibernateException, SQLException {
 				String hql = "select p from Product as p inner join p.merchant as mc inner join mc.merchantCode as mcc "
-						+"where mcc.note like :keyWdrd order by p.review desc";
+						+"where mcc.note like :keyWord order by p.review desc";
 				Query query = session.createQuery(hql);
 				query.setString("keyWord", keyWord);
 				query.setFirstResult(first);

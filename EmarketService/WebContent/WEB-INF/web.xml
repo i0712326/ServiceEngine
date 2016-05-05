@@ -45,7 +45,8 @@
 			com.emc.app.spi.poi.OrderPoiImp,
 			com.emc.app.spi.poi.MerchantCodePoiImp,
 			com.emc.app.spi.poi.ProductPoiImp,
-			com.emc.app.spi.poi.ShippingPoiImp
+			com.emc.app.spi.poi.ShippingPoiImp,
+			com.emc.app.spi.poi.CommentPoiImp
 		</param-value>
   </context-param>
  

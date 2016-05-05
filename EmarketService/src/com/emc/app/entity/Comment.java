@@ -1,5 +1,7 @@
 package com.emc.app.entity;
 
+import java.sql.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,6 +17,10 @@ public class Comment {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="COMID")
 	private int id;
+	@Column(name="COMDATE")
+	private Date date = new Date(new java.util.Date().getTime());
+	@Column(name="RATE")
+	private int rate;
 	@Column(name="COMMENT")
 	private String comment;
 	@ManyToOne
@@ -28,6 +34,18 @@ public class Comment {
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public int getRate() {
+		return rate;
+	}
+	public void setRate(int rate) {
+		this.rate = rate;
 	}
 	public String getComment() {
 		return comment;

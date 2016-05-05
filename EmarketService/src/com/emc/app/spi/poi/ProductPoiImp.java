@@ -34,7 +34,7 @@ public class ProductPoiImp implements ProductPoi {
 	
 	@Override
 	public Response searchProduct(String keyWord, int first, int max) {
-		List<Product> list =productService.getProductByKeyWord(keyWord, first, max);
+		List<Product> list =productService.getProductByKeyWord("%"+keyWord+"%", first, max);
 		return Response.ok().entity(list).build();
 	}
 	@Override
